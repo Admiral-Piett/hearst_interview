@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-# from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse
 
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
@@ -11,10 +11,10 @@ from ..serializers import CourseSerializer, StudentSerializer, StudentToCourseSe
 
 # Create your views here.
 def index(request):
-    return Response("Hello World")
+    return HttpResponse("Hello World")
 
 class ViewSwitch():
-    # TODO: add in results stats at top of response, eg. results_count, 
+    # TODO: add in results stats at top of response, eg. results_count,
 
     @staticmethod
     @csrf_exempt
